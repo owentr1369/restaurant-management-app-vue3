@@ -31,6 +31,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
@@ -40,6 +41,17 @@ export default {
         address: "",
       },
     };
+  },
+  async mounted() {
+    let user = localStorage.getItem("user-info");
+    if (!user) {
+      this.$router.push({ name: "signup" });
+    }
+    const result = await axios.get(
+      `http://localhost:3000/restaurants/${this.$route.params.id}`
+    );
+    this.restaurant = result.data;
+    console.log(this.restaurant);
   },
 };
 </script>
