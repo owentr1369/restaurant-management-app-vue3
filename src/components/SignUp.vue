@@ -37,6 +37,9 @@ export default {
       });
       console.log(result);
       if (result.status == 201) {
+        // The 201 (Created) status code indicates that the request
+        // has been fulfilled and has resulted in one or more new
+        // resources being created.
         localStorage.setItem("user-info", JSON.stringify(result.data));
         this.$router.push({ name: "home" });
       }
@@ -44,8 +47,8 @@ export default {
   },
   mounted() {
     let user = localStorage.getItem("user-info");
-    if (!user) {
-      this.$router.push({ name: "signup" });
+    if (user) {
+      this.$router.push({ name: "home" });
     }
   },
 };

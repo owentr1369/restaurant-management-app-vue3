@@ -8,7 +8,7 @@
     <div class="login-input">
       <input type="email" v-model="email" placeholder="Enter email" />
       <input type="password" v-model="password" placeholder="Enter password" />
-      <button v-on:click="signUp">Login</button>
+      <button v-on:click="login">Login</button>
       <p>
         <router-link to="/signup">Sign Up</router-link>
       </p>
@@ -17,8 +17,36 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "LoginPage",
+  data() {
+    return {
+      email: "",
+      password: "",
+    };
+  },
+  methods: {
+    async login() {
+      let result = await axios.get(
+        `http://localhost:3000/users?email=${this.email}&password=${this.password}`
+      );
+      console.log(result);
+      if (result.status == 200 && result.data.length > 0) {
+        // The HTTP 200 OK success status response code indicates
+        // that the request has succeeded. A 200 response is
+        // cacheable by default.
+        localStorage.setItem("user-info", JSON.stringify(result.data));
+        this.$router.push({ name: "home" });
+      }
+    },
+  },
+  mounted() {
+    let user = localStorage.getItem("user-info");
+    if (user) {
+      this.$router.push({ name: "home" });
+    }
+  },
 };
 </script>
 
