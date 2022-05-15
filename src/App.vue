@@ -2,10 +2,19 @@
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
+    <SignUp />
   </nav>
-  <router-view/>
+  <router-view />
 </template>
+<script>
+import SignUp from "./components/SignUp.vue";
+export default {
+  components: { SignUp },
+  // setup() {
 
+  // },
+};
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
