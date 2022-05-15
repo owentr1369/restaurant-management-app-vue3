@@ -55,15 +55,11 @@ export default {
         // The 201 (Created) status code indicates that the request
         // has been fulfilled and has resulted in one or more new
         // resources being created.
-        localStorage.setItem("restaurant-info", JSON.stringify(result.data));
         this.restaurant.name = "";
         this.restaurant.contact = "";
         this.restaurant.address = "";
         this.$router.push({ name: "add" });
       }
-      this.restaurant.name = "";
-      this.restaurant.contact = "";
-      this.restaurant.address = "";
     },
   },
   // mounted() {

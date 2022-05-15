@@ -73,24 +73,6 @@
       "name": "Ca Lua",
       "contact": "19001144",
       "address": "68 Ly Thuong Kiet St, Ward 15, Tan Binh District, HCMC"
-    },
-    {
-      "name": "Thien Tam Tran",
-      "contact": "19007844",
-      "address": "Lu Gia st ward 12",
-      "id": 4
-    },
-    {
-      "name": "Thien Tam Tran",
-      "contact": "19007844",
-      "address": "Lu Gia st ward 12 quan ca tinh",
-      "id": 5
-    },
-    {
-      "name": "Thien Tam Tran",
-      "contact": "19007844",
-      "address": "Lu Gia st ward 12 quan ca tinh abc",
-      "id": 6
     }
   ]
 }

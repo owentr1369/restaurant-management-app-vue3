@@ -23,7 +23,7 @@
         placeholder="Enter address"
         v-model="restaurant.address"
       />
-      <button type="button" v-on:click="addRestaurant">
+      <button type="button" v-on:click="updateRestaurant">
         Update restaurant
       </button>
     </form>
@@ -41,6 +41,25 @@ export default {
         address: "",
       },
     };
+  },
+  methods: {
+    async updateRestaurant() {
+      let result = await axios.put(
+        `http://localhost:3000/restaurants/${this.$route.params.id}`,
+        {
+          name: this.restaurant.name,
+          contact: this.restaurant.contact,
+          address: this.restaurant.address,
+        }
+      );
+      console.log(result);
+      if (result.status == 200) {
+        // The HTTP 200 OK success status response code indicates
+        // that the request has succeeded. A 200 response is
+        // cacheable by default.
+        this.$router.push({ name: "home" });
+      }
+    },
   },
   async mounted() {
     let user = localStorage.getItem("user-info");
