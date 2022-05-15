@@ -2,7 +2,7 @@
   <div class="home">
     <h1>Home Page</h1>
     <h2>Hello {{ this.name }}, welcome back</h2>
-    <table border="1">
+    <table class="table-home" border="1">
       <tr>
         <td>ID</td>
         <td>Name</td>
@@ -51,6 +51,9 @@ export default {
 };
 </script>
 <style scoped>
+.table-home {
+  margin: auto;
+}
 td {
   width: 160px;
   height: 40px;

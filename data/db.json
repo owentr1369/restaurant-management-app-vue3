@@ -61,7 +61,8 @@
       "name": "McDonald",
       "contact": "19001122",
       "address": "16 Lu Gia St, Ward 15, District 11, HCMC"
-    }, {
+    },
+    {
       "id": 2,
       "name": "Burger King",
       "contact": "19001133",
@@ -72,6 +73,24 @@
       "name": "Ca Lua",
       "contact": "19001144",
       "address": "68 Ly Thuong Kiet St, Ward 15, Tan Binh District, HCMC"
+    },
+    {
+      "name": "Thien Tam Tran",
+      "contact": "19007844",
+      "address": "Lu Gia st ward 12",
+      "id": 4
+    },
+    {
+      "name": "Thien Tam Tran",
+      "contact": "19007844",
+      "address": "Lu Gia st ward 12 quan ca tinh",
+      "id": 5
+    },
+    {
+      "name": "Thien Tam Tran",
+      "contact": "19007844",
+      "address": "Lu Gia st ward 12 quan ca tinh abc",
+      "id": 6
     }
   ]
 }

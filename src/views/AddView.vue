@@ -31,21 +31,40 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "AddView",
-  methods: {
-    addRestaurant() {
-      console.log(this.restaurant);
-    },
-  },
   data() {
     return {
       restaurant: {
         name: "",
-        address: "",
         contact: "",
+        address: "",
       },
     };
+  },
+  methods: {
+    async addRestaurant() {
+      let result = await axios.post("http://localhost:3000/restaurants", {
+        name: this.restaurant.name,
+        contact: this.restaurant.contact,
+        address: this.restaurant.address,
+      });
+      console.log(result);
+      if (result.status == 201) {
+        // The 201 (Created) status code indicates that the request
+        // has been fulfilled and has resulted in one or more new
+        // resources being created.
+        localStorage.setItem("restaurant-info", JSON.stringify(result.data));
+        this.restaurant.name = "";
+        this.restaurant.contact = "";
+        this.restaurant.address = "";
+        this.$router.push({ name: "add" });
+      }
+      this.restaurant.name = "";
+      this.restaurant.contact = "";
+      this.restaurant.address = "";
+    },
   },
   // mounted() {
   //   let user = localStorage.getItem("user-info");
@@ -75,6 +94,7 @@ img {
   margin-left: auto;
   border: 1px solid skyblue;
   border-radius: 3px;
+  margin-top: 12px;
 }
 .add-form button {
   min-width: 400px;
