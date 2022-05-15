@@ -2,23 +2,57 @@
   <div class="home">
     <h1>Home Page</h1>
     <h2>Hello {{ this.name }}, welcome back</h2>
+    <table border="1">
+      <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Contact</td>
+        <td>Address</td>
+      </tr>
+      <tr v-for="item in restaurant" :key="item.id">
+        <td>
+          {{ item.id }}
+        </td>
+        <td>
+          {{ item.name }}
+        </td>
+        <td>
+          {{ item.contact }}
+        </td>
+        <td>
+          {{ item.address }}
+        </td>
+      </tr>
+    </table>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "HomeView",
   data() {
     return {
       name: "",
+      restaurant: [],
     };
   },
-  mounted() {
+
+  async mounted() {
     let user = localStorage.getItem("user-info");
     this.name = JSON.parse(user)[0].name;
-    // if (!user) {
-    //   this.$router.push({ name: "signup" });
-    // }
+    if (!user) {
+      this.$router.push({ name: "signup" });
+    }
+    let result = await axios.get("http://localhost:3000/restaurants");
+    this.restaurant = result.data;
+    console.log(this.restaurant);
   },
 };
 </script>
+<style scoped>
+td {
+  width: 160px;
+  height: 40px;
+}
+</style>
