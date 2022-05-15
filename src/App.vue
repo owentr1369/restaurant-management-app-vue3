@@ -1,19 +1,20 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/login">Login</router-link> |
-    <router-link to="/signup">Sign Up</router-link>
-  </nav>
-  <router-view />
+  <HeaderComp />
 </template>
 <script>
+import HeaderComp from "./components/HeaderComp.vue";
 export default {
   // setup() {
   // },
+  components: { HeaderComp },
 };
 </script>
 <style>
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -21,13 +22,7 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-
-nav {
-  padding: 30px;
-}
-
 nav a {
-  font-weight: bold;
   color: #2c3e50;
 }
 
