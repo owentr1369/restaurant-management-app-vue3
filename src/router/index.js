@@ -12,7 +12,7 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/update",
+    path: "/update/:id",
     name: "update",
     component: UpdateView,
   },

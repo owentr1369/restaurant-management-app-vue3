@@ -1,9 +1,5 @@
 <template>
   <div class="login">
-    <img
-      src="../assets/kisspng-monumental-restaurant-logo-cafe-5af54f49045985.8762634515260260570178.png"
-      alt=""
-    />
     <h1>Login</h1>
     <div class="login-input">
       <input type="email" v-model="email" placeholder="Enter email" />
@@ -54,9 +50,6 @@ export default {
 .login {
   display: block;
   margin-top: 12px;
-}
-img {
-  width: 100px;
 }
 .login-input input {
   min-width: 400px;

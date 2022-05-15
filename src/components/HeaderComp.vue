@@ -2,7 +2,6 @@
   <nav>
     <router-link class="nav-item" to="/">Home</router-link> |
     <router-link class="nav-item" to="/add">Add Restaurant</router-link> |
-    <router-link class="nav-item" to="/update">Update Restaurant</router-link> |
     <router-link v-on:click="logout" class="nav-item" to="#"
       >Logout</router-link
     >
