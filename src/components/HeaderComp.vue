@@ -3,7 +3,9 @@
     <router-link class="nav-item" to="/">Home</router-link> |
     <router-link class="nav-item" to="#">Add Restaurant</router-link> |
     <router-link class="nav-item" to="#">Update Restaurant</router-link> |
-    <router-link class="nav-item" to="#">Logout</router-link>
+    <router-link v-on:click="logout" class="nav-item" to="#"
+      >Logout</router-link
+    >
   </nav>
   <router-view />
 </template>
@@ -11,6 +13,12 @@
 <script>
 export default {
   name: "HeaderComp",
+  methods: {
+    logout() {
+      localStorage.clear();
+      this.$router.push({ name: "login" });
+    },
+  },
 };
 </script>
 
