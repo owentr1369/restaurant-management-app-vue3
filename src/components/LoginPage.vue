@@ -32,7 +32,7 @@ export default {
         `http://localhost:3000/users?email=${this.email}&password=${this.password}`
       );
       console.log(result);
-      if (result.status == 200 && result.data.length > 0) {
+      if (result.status == 200) {
         // The HTTP 200 OK success status response code indicates
         // that the request has succeeded. A 200 response is
         // cacheable by default.

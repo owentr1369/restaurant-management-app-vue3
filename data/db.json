@@ -3,7 +3,7 @@
     {
       "name": "Tran Tam",
       "email": "tamabc@gmail.com",
-      "password": "abcxyz123",
+      "password": "1",
       "id": 1
     },
     {
@@ -53,6 +53,25 @@
       "email": "tam147@gmail.com",
       "password": "testing",
       "id": 9
+    }
+  ],
+  "restaurant": [
+    {
+      "id": 1,
+      "name": "McDonald",
+      "contact": "19001122",
+      "address": "16 Lu Gia St, Ward 15, District 11, HCMC"
+    }, {
+      "id": 2,
+      "name": "Burger King",
+      "contact": "19001133",
+      "address": "62 Nguyen Thi Minh Khai St, Ben Nghe Ward, District 1, HCMC"
+    },
+    {
+      "id": 3,
+      "name": "Ca Lua",
+      "contact": "19001144",
+      "address": "68 Ly Thuong Kiet St, Ward 15, Tan Binh District, HCMC"
     }
   ]
 }
