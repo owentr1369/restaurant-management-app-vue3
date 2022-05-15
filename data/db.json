@@ -23,6 +23,36 @@
       "email": "bruce@gmail.com",
       "password": "bruce123",
       "id": 4
+    },
+    {
+      "name": "bruce",
+      "email": "bruce@gmail.com",
+      "password": "bruce123",
+      "id": 5
+    },
+    {
+      "name": "Hello",
+      "email": "hello@gmail.com",
+      "password": "Hello",
+      "id": 6
+    },
+    {
+      "name": "tam",
+      "email": "tam@gmail.com",
+      "password": "tam123456",
+      "id": 7
+    },
+    {
+      "name": "tam",
+      "email": "tam@gmail.com",
+      "password": "tam123456",
+      "id": 8
+    },
+    {
+      "name": "Tam",
+      "email": "tam147@gmail.com",
+      "password": "testing",
+      "id": 9
     }
   ]
 }

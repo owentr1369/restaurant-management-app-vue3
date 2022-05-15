@@ -1,17 +1,14 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-    <SignUp />
+    <router-link to="/about">About</router-link> |
+    <router-link to="/signup">Sign Up</router-link>
   </nav>
   <router-view />
 </template>
 <script>
-import SignUp from "./components/SignUp.vue";
 export default {
-  components: { SignUp },
   // setup() {
-
   // },
 };
 </script>
